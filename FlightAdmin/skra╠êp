@@ -1,0 +1,55 @@
+&lt;div class="grid-container"&gt;
+      
+      &lt;div class="header"&gt;Innehåll&lt;/div&gt;
+
+    &lt;div class="item1"&gt;Innehåll&lt;/div&gt;
+
+    &lt;div class="item2"&gt;Innehåll&lt;/div&gt;
+
+&lt;!--Här kan fler items läggas in--&gt;
+
+&lt;/div&gt;
+
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header header'
+    'box1 box1 box2 box2'
+    'box3 box3 box4 box4';
+    justify-content: center;
+    grid-gap: 30px;
+}
+.header { grid-area: header;
+text-align: center;
+}
+.item1 { grid-area: box1;}
+.item2 { grid-area: box2; }
+.item3 { grid-area: box3; }
+.item4 { grid-area: box4; 
+    max-width: 100%;
+}
+.grid-container &gt; div {
+    padding: 15px;
+    padding-top: 25px;
+    background: rgba(0,0,0,.5);
+}
+
+
+
+
+&lt;form action="index.php" method="get"&gt;
+        
+        
+            &lt;label&gt;Sök efter flygresa enligt bokningsid&lt;/label&gt;
+        
+        
+            &lt;input type="text" name="mySearch"&gt;&lt;br&gt;
+        
+     
+            &lt;input type="submit" name= "Skicka" value="Skicka" id="skicka"&gt;
+        
+            &lt;/form&gt;

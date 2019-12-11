@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body.flightadmin {
+  background-image: url(tim-easley-317625-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+body.styleguide {
+    background-color: lightblue;
+    width: 100%;
+}
+
+.itemtypes {
+    background-color: gray
+}
+
+/*Bakgrundsbilden som används för sidan man använder styleguiden på*/
+
+/*Rutnätet för sidan man ska använda styleguiden på*/
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header header'
+    'box1 box1 box2 box2'
+    'box3 box3 box4 box4';
+    justify-content: center;
+    grid-gap: 30px;
+}
+
+.header { grid-area: header;
+text-align: center;
+}
+.item1 { grid-area: box1;}
+.item2 { grid-area: box2; }
+.item3 { grid-area: box3; }
+.item4 { grid-area: box4; 
+    max-width: 100%;
+}
+
+.grid-container > div {
+    padding: 15px;
+    padding-top: 25px;
+    background: rgba(0,0,0,.5);
+}
+
+footer {
+    height:80px;
+    text-align: center;
+    position:absolute;
+    bottom:0;
+    background: rgba(0,0,0,.5);
+    padding-top: 15px;
+    min-width: 100%;
+}
+
+/*Specifika rutnätet för styleguiden*/
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    background-color: white;
+    margin-bottom: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-33 {
+    width: 33%;
+}
+
+.col-100 {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    padding: 15px;
+}
+
+#styleguideheader {
+    padding: 25px;
+}
+
+footer > a {
+    margin: 40px;
+}
+
+h1 {
+    font-family: avenir;
+    font-weight: lighter;
+    color: white;
+    font-size: 40px;
+    margin: 10px;
+}
+
+h2 {
+    color: white;
+    font-family: avenir;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/*td {
+    text-align: left;
+    padding-left: 35px;
+}
+*/
+table, th, td {
+    border-bottom: 1px solid black;
+}
+
+p {
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family: Times-Roman;
+}
+
+form {
+    text-align: center;
+    margin-top:10px;
+}
+
+label {
+    color: white;
+    font-family: Times-Roman;
+}
+
+input[type="text"]{
+    height:30px;
+    width:50%;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#skicka {
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:block;
+    -webkit-border-radius:11;
+    -moz-border-radius:11;
+    border-radius:11px;
+    font-family: avenir;
+    color: #000000;
+    font-size: 17px;
+    background: #ffffff;
+    padding: 10px 20px 10px 20px;
+    border: solid #b7b7b7 1px;
+    text-decoration: none;
+    
+}
+
+#skicka:hover {
+    background: #cccccc;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+
+.colorBoxBlack {
+    background-color: rgba(0,0,0,1);
+    height: 9em;
+    padding: 10px;;
+    text-align: center;
+    color:white;
+}
+
+.colorBoxWhite {
+    background-color: white;
+    height: 9em;
+    padding: 10px;;
+    border: 1px solid black;
+    text-align: center;
+    color:black;
+}
+
+.colorBoxGrey {
+    background-color: #cccccc;
+    height: 9em;
+    padding: 10px;;
+    border: 1px solid black;
+    text-align: center;
+    color:black;
+}
+
+#backgroundImage {
+    width:100%;
+}

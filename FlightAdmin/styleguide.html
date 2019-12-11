@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <meta charset="utf-8">
+    <link href="lab1.css" rel="stylesheet">
+    <title>Stylesheet</title>
+    </head>
+
+    
+    <body class="styleguide">   
+        
+
+ <div class="row">
+     
+      <div class="col-100" id="styleguideheader">Styleguide</div>
+     
+ </div>
+
+<div class="row">
+            
+    <div class="col-33">
+        
+        Rutsystem<br><br>    
+        Rutsystemet är indelat i fyra kolumner. Huvudrubriken täcker alla fyra kolumner medan de övriga lådorna täcker två stycken. Dessa lådor är centrerade och anpassas i storlek efter innehållet. Avståndet mellan kolumnerna är lika stort som det mellan raderna, 30 pixlar.
+            
+        </div>
+            
+    <div class="col-33">
+        
+        <div class="grid-container">
+            
+        <div class="header">Header</div>
+
+    <div class="item1">
+        Item 1
+     </div>
+
+<!-- Ruta 2 (högerövre) -->
+
+    <div class="item2">
+        Item 2
+        
+     </div>
+<!-- Ruta 3 (nedrevänster) -->
+
+    <div class="item3">
+      Item 3
+    </div>
+
+<!-- Ruta 4 (nedrehöger) -->
+
+    <div class="item4">
+        
+        Item 4
+
+    </div>
+     </div>
+        </div>
+        <div contenteditable="true" class="col-33">
+            HTML<br><br>
+            
+            &lt;div class="grid-container"&gt;<br>
+      
+            &lt;div class="header"&gt;Innehåll&lt;/div&gt;<br>
+
+            &lt;div class="item1"&gt;Innehåll&lt;/div&gt;<br>
+
+            &lt;div class="item2"&gt;Innehåll&lt;/div&gt;<br>
+            Här kan fler items läggas in<br>
+        &lt;/div&gt;<br><br>
+
+            CSS<br><br>
+            
+            .grid-container {<br>
+    display: grid;<br>
+    grid-template-areas:<br>
+    'header header header header'<br>
+    'box1 box1 box2 box2'<br>
+    'box3 box3 box4 box4';<br>
+    justify-content: center;<br>
+    grid-gap: 30px;<br>
+}<br><br>
+.header { grid-area: header;<br>
+text-align: center;<br>
+}<br><br>
+.item1 { grid-area: box1;}<br>
+.item2 { grid-area: box2; }<br>
+.item3 { grid-area: box3; }<br>
+.item4 { grid-area: box4;<br>
+    max-width: 100%;<br>
+}<br><br>
+.grid-container > div {<br>
+    padding: 15px;<br>
+    padding-top: 25px;<br>
+    background: rgba(0,0,0,.5);<br>
+}<br>
+
+            
+            
+</div>
+        
+            
+            </div>
+            
+      <div class="row">    
+            <!--Typografo-->
+
+    <div class="col-33">
+       
+        Samtlig text förutom knapptexten har har vit färg.<br>
+        Till huvudrubriker, underrubriker och knapptexten används typsnittet avenir,<br> till huvudrubrikerna används dock en tunnare version.<br> 
+        Till formulärrubriker och paragrafer används typsnittet Times-Roman.
+        
+     </div>
+        
+            <div class="col-33 itemtypes">
+       
+                <h1>Huvudrubrik</h1><br>
+                <h2>Underrubrik</h2><br>
+                <p>Paragraf</p><br>
+                <label>Rubriker till formulär</label>
+        
+            </div>
+        
+                <div class="col-33">
+                    CSS<br><br>
+                    Huvudrubriker:<br><br>
+                        
+                        h1 {<br>
+                        font-family: avenir;<br>
+                        font-weight: lighter;<br>
+                        color: white;<br>
+                        font-size: 40px;<br>
+                        margin: 10px;<br>
+                        }<br><br>
+                    
+                    Underrubriker:<br><br>
+                    
+                    h2 {<br>
+                    color: white;<br>
+                    font-family: avenir;<br>
+                    margin: 0;<br>
+                    text-align: center;<br>
+                        }<br><br>
+                    
+                    Paragrafer:<br><br>
+                    
+                    p {<br>
+                    margin: 0;<br>
+                    color: white;<br>
+                    text-align: center;<br>
+                    font-family: Times-Roman;<br>
+                        }<br><br>
+                    
+                    Rubriker till formulär:<br><br>
+                    
+                    label {<br>
+                    color: white;<br>
+                    font-family: Times-Roman;<br>
+                        }<br>
+                    
+                
+        
+                </div>
+
+            
+            </div>       
+            <div class="row">
+            
+            
+          <!--Färger-->  
+            
+    <div class="col-33">
+
+        På sidan används två färger. Lådorna använder sig av en svart färg med en opacitet på 50%. All text använder sig av vit färg förutom knapptexten som är svart. När man för muspekaren över en knapp så får knappen en grå färg.
+        
+    </div>
+
+        <div class="col-33">
+
+            
+            <div class="colorBoxBlack">
+            #000000
+        </div>
+      
+            <div class="colorBoxWhite">
+            #ffffff
+                
+        </div>
+            
+            <div class="colorBoxGrey">
+            #cccccc
+                
+        </div>
+            
+        </div>
+            
+            <div class="col-33">
+                
+                CSS<br><br>
+                Färg på lådorna:<br><br>
+                
+                .grid-container > div { <br>
+                background: rgba(0,0,0,.5);<br>
+                    }<br><br><br>
+                
+                Färg på texten:<br><br>
+                
+                h1, h2, td, th {
+                color: white;
+                }
+                <br><br><br>
+                
+                Färg på knappar vid hovring: <br><br>
+                
+                #skicka:hover { <br>
+                background: #cccccc; <br>
+                text-decoration: none;<br>
+                cursor:pointer; <br>
+                }
+                <br><br>
+                Färg på knapptexten: <br> <br>
+                
+                #skicka { <br>
+                color: #000000; <br>
+                }
+            </div>
+
+            
+        </div>
+        <div class="row">
+            
+            
+            <!--Form-->
+            
+    <div class="col-33">
+        
+        Formuläret är centrerat inom lådan. Bredden på textfältet är hälften så brett som lådan det är i. Knappen har rundade hörn och har en vit färg och knapptexten har en svart färg.
+        <br><br>
+        I exemplet bredvid används en grå bakgrundsfärg för att förtydliga den vita rubriken.
+
+    </div>
+    
+        <div class="col-33">
+        
+            <div class="itemtypes"> 
+            <form action="index.php" method="get">
+        
+            <label>Sök efter flygresa enligt bokningsid</label><br>
+    
+            <input type="text" name="mySearch"><br>
+        
+            <input type="submit" name= "Skicka" value="Skicka" id="skicka">
+            
+            </form>
+                </div> 
+
+        </div>
+    
+            <div class="col-33">
+        
+                HTML<br><br>
+            &lt;form action="index.php" method="get"&gt;<br>
+        
+        
+            &lt;label&gt;Rubrik för textfält&lt;/label&gt;<br>
+        
+        
+            &lt;input type="text" name="mySearch"&gt;&lt;br&gt;<br>
+        
+     
+            &lt;input type="submit" name= "Skicka" value="Skicka" id="skicka"&gt;<br>
+        
+            &lt;/form&gt;<br><br>
+            
+                CSS <br><br>
+                
+                Formuläret:<br><br>
+                
+                form {<br>
+                text-align: center;<br>
+                margin-top:10px;<br>
+                }<br><br>
+                
+                Textfältet:<br><br>
+                
+                input[type="text"] {<br>
+                height:30px;<br>
+                width:50%;<br>
+                margin-top:10px;<br>
+                margin-left: auto;<br>
+                margin-right: auto;<br>
+                }<br><br>
+                
+                
+                Knappen:<br><br>
+                
+                #skicka { <br>
+                margin:auto;<br>
+                margin-top: 10px;<br>
+                margin-bottom: 10px;<br>
+                display:block;<br>
+                -webkit-border-radius:11;<br>
+                -moz-border-radius:11;<br>
+                border-radius:11px;<br>
+                font-family: Arial;<br>
+                color: #292929;<br>
+                font-size: 17px;<br>
+                background: #ffffff;<br>
+                padding: 10px 20px 10px 20px;<br>
+                border: solid #b7b7b7 1px;<br>
+                text-decoration: none;<br>
+    
+                }<br>
+
+                #skicka:hover {<br>
+                background: #cccccc;<br>
+                text-decoration: none;<br>
+                cursor:pointer;<br>
+                }
+            </div>
+            
+            
+            
+            
+        </div>
+            
+    
+            <!--Länkar-->
+    
+        <div class="row">
+        
+    <div class="col-33">
+  
+        Alla länkar på sidan använder sig av en vit färg. Dessutom är samtliga kursiva. <br> <br>
+        I exemplet bredvid används en grå bakgrundsfärg för att förtydliga den vita länken. <br><br>
+        Länkar i footern använder sig av en annan marginal.
+
+    </div>
+            
+        <div class="col-33">
+            
+            <div class="itemtypes">   
+                <a href="index.php">Index.php</a>   
+            </div>
+        </div>
+    
+            <div class="col-33">
+
+                Länkar:<br><br>
+                
+                a {<br>
+                color: white;<br>
+                font-style: italic;<br>
+                text-align: left;<br>
+                    }<br><br>
+                
+                Länkar i footer:<br><br>
+
+                footer > a {<br>
+                margin: 40px;<br>
+                    }<br>
+            </div>
+            
+            
+        </div>
+        
+        <div class="row">
+            
+            <!--Bilder-->
+            
+    <div class="col-33">
+      
+        
+        Den enda bilden som används är en bakgrundsbild. Bilden är fixerad och påverkas inte av scrollning. 
+
+    </div>
+            
+        <div class="col-33">
+            <img src="tim-easley-317625-unsplash.jpg" id="backgroundImage">
+            
+        </div>
+            
+            <div class="col-33">
+            
+                Bakgrundsbild:<br><br>
+                
+                body.flightadmin {<br>
+                background-image: url(tim-easley-317625-unsplash.jpg);<br>
+                background-repeat: no-repeat;<br>
+                background-attachment: fixed;<br>
+                background-size: cover;<br>
+                    }<br>
+
+            </div>
+            
+        </div>
+            
+            
+     <!--
+      <footer>
+        
+          <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fhome.mi.sh.se%2F~sh14hf1909%2Ffa%2F">Validera HTML</a><br>
+          <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhome.mi.sh.se%2F%7Esh14hf1909%2Ffa%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv">Validera CSS</a>
+          
+          </footer>
+      -->
+    
+      
+
+    
+    
+    
+    
+    </body>
+
+</html>
